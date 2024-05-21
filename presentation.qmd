@@ -1,0 +1,66 @@
+---
+title: "`admiral`; The `dplyr` of the pharmaceutical industry?"
+author: 
+ - Stefan Thoma
+ - Edoardo Mancini
+date: today
+format: revealjs
+editor: visual
+---
+
+## Background on "big pharma" (3min)
+
+- Historically protective on both data and code
+- Usually working in SAS (historically)
+- Quite a negative image in popular culture - sometimes deservedly!
+
+::: notes
+Discuss the historical protectiveness over data and code within "big pharma," the traditional use of SAS, and the industry's portrayal in popular culture.
+:::
+
+## ADaM (3min)
+
+- What is ADaM?
+- Why something like admiral (modular) might work
+
+::: notes
+Explain what ADaM stands for, its relevance in the industry, and why a modular approach like Admiral is beneficial.
+:::
+
+## How admiral was thought up, and later pharmaverse (5min)
+
+- Open Source from the very beginning
+- First of its kind in open source pharma
+- Why working in R makes this sort of thing much easier than SAS
+
+::: notes
+Introduce Admiral and Pharmaverse as pioneering open-source efforts in pharma, and discuss the advantages of using R over SAS.
+:::
+
+## How to foster cross-company collaboration (5min)
+
+- "Showing your hand" first
+- Assigning people with significant time percentages to OS work
+- Legal considerations?
+
+::: notes
+Outline strategies for fostering cross-company collaboration, such as transparency, dedicated resource allocation, and navigating legal considerations.
+:::
+
+## Admiralvaccines (3min)
+
+- NOT principally led by Roche or GSK, but Pfizer - so they were empowered to set something up through our fit for purpose framework.
+- Mention that this was pandemic-driven - expand on this
+- Lessons learned - good and bad
+
+::: notes
+Highlight the collaborative effort behind Admiralvaccines, led by Pfizer, and reflect on the lessons learned during the pandemic.
+:::
+
+## What's coming next? (1min)
+
+- AI - all our docs are OS so AI should be able to learn admiral easily!
+
+::: notes
+Discuss future directions, such as the potential for AI to leverage the open-source nature of Admiral for advanced learning and automation.
+:::
