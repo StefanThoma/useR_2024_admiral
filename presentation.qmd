@@ -1,5 +1,5 @@
 ---
-title: "`admiral`; The `dplyr` of the pharmaceutical industry?"
+title: "`admiral` - The `dplyr` of the pharmaceutical industry?"
 author: 
  - Stefan Thoma
  - Edoardo Mancini
@@ -8,23 +8,50 @@ format: revealjs
 editor: visual
 ---
 
-## Background on "big pharma" (3min)
+## Another side to "Big Pharma"?
 
-- Historically protective on both data and code
-- Usually working in SAS (historically)
-- Quite a negative image in popular culture - sometimes deservedly!
+<br>
+
+![](media/evil_scientist.jpg){fig-align="center" width=60% height=60%}
 
 ::: notes
-Discuss the historical protectiveness over data and code within "big pharma," the traditional use of SAS, and the industry's portrayal in popular culture.
+Section duration: 2 min
+
+The pharmaceutical industry is comprised of hundreds of large, billion dollar companies, active in countless therapeutic areas and indications. We won't delve into this in too much detail, but it's safe to say that the image of "big pharma" in popular culture is one of greedy companies who put themselves and their profits ahead of the patients' needs.
+
+While we do believe that there is more subtlety here than meets the eye, we won't dispute any of these claims today. Rather, in our presentation we hope to showcase a different side of big pharma - one of collaboration and cooperation towards the ultimate goal of doing more for patients around the world. 
+
+To do this, we need to establish a few key facts first:
+
+* Historically, pharma companies have been very protective of both their clinical trial data - which makes total sense - but also their code, i.e. what they use to analyse their ongoing trials. This has resulted in lots of companies independently developing toolsets that effectively carry out very similar purposes.
+
+* These toolsets were primarily written in SAS, a statistical software which has been industry-standard for 20+ years.
 :::
 
-## ADaM (3min)
+## What is ADaM, and why {admiral}?
 
-- What is ADaM?
-- Why something like admiral (modular) might work
+- In 2016 CDISC introduced the **Analysis Data Model (ADaM)**. This is a therapeutic-area-agnostic set of guidelines for clinical trial dataset structure.
+- ADaM lends itself to a modular tool for dataset generation.
+
+::: {layout-ncol=2}
+![](media/cdisc.png){width=40% height=40%}
+![](media/lego.png){width=40% height=40%}
+:::
 
 ::: notes
-Explain what ADaM stands for, its relevance in the industry, and why a modular approach like Admiral is beneficial.
+Section duration: 4 min
+
+In 2016, CDISC, which is an institution which sets data standards across the industry, introduced the Analysis Data Model, also known as ADaM. Without delving into too much detail, this can be thought of as a precise set of guidelines mandating the structure of the datasets that underpin clinical trial analysis. So, every company running a clinical trial after 2016 - no matter the therapeutic area - was now required to convert their collected, raw data into ADaM datasets prior to creating the tables, listings and graphs that will be used to evaluate the trial's outcome.
+
+Note that we are glossing over the fact that there exists an intermediate set of datasets called SDTM datasets between the raw datasets step and the ADaM step. This isn't so relevant for our presentation, other than for the fact that it means the starting point for the ADaM datsets is also common across industry.
+
+We also don't need to go into too much detail about what ADaM datasets actually look like, but it's important to understand that the steps used to construct them are often dataset-agnostic. Some examples include:
+
+* Merging a subset of a dataset with another dataset
+* Adding derived records based on existing ones
+* Converting character strings to dates and imputing missing values
+
+Consequently, it stands to reason that if ever a tool (or package) could exist to aid in the generation of these ADaMs, this tool could be modular: various derivations could be chained together like  and customised to generate your dataset of interest. Ideally, this package would also interact seamlessly with the {tidyverse}, so that if ever a step for adding a new variable was trivial, then simple {dplyr} code could be slotted in to your derivation sequence. This idea is exactly the thought behind the inception of the {admiral} package.
 :::
 
 ## How admiral was thought up, and later pharmaverse (5min)
