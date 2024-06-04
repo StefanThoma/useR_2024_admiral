@@ -78,12 +78,13 @@ Outline strategies for fostering cross-company collaboration, such as transparen
 
 ## A success story: {admiralvaccine}
 
-The COVID-19 pandemic was a worldwide catastrophe... but it was also an opportunity to collaborate further within pharma.
+- The COVID-19 pandemic was a worldwide catastrophe, but it was also an opportunity to **collaborate further** within pharma...
+- ... Enter {admiralvaccine}!
 
 ::: {layout-ncol=2}
 ![](media/covid.jpg){width=40% height=40%}
 
-![](media/admiralvaccine.png){width=20% height=20%}
+![](media/admiralvaccine.png){width=15% height=15%}
 :::
 
 ::: notes
@@ -99,10 +100,34 @@ We should stress that not all aspects of this experience were strictly positive:
 
 :::
 
-## What's coming next? (1min)
+## {admiral}: Looking ahead 
 
-- AI - all our docs are OS so AI should be able to learn admiral easily!
+Training models on {admrial} documentation: could AI be the next frontier?
+
+::: {layout-ncol=2}
+![](media/admiral_website.png){width=15% height=15%}
+
+![](media/ai.png){width=20% height=20%}
+
+:::
 
 ::: notes
-Discuss future directions, such as the potential for AI to leverage the open-source nature of Admiral for advanced learning and automation.
+Section duration {1 min}
+
+Similar to {dplyr}, the core {admiral} package has now reached a point of maturity and stability, where we do not anticipate the need for large overhauls of our material in the future. At the same time, our documentation has undergone many rounds of review and is robust and extensive. Industry uptake is contantly on the rise and we see a near future where it is **the** default solution for ADaM creation.
+
+As such, one avenue for improvement in the future is with regards to the learning curve required to get used to the package. AI is all the rage right now, so why not try to apply it to {admiral} as well? At the moment, there are efforts internally at various companies to train LLMs and chatbots on {admiral} documentation, which have proven quite fruitful. There hasn't yet been an Open Source effort in this space, though it is true that because everything is Open Source, the next re-training of something like Chat GPT may suddenly result in the model being an expert on ADaM creation!
+
+So, we are very excited for what the future holds!
+
+_Note: could also talk about automation efforts for {admiral}, but wery of time and having to descrive things like specs first._
 :::
+
+## Q&A and Resources
+
+::: notes
+Add: admiral website, cheat sheet, anything else?
+:::
+
+
+
