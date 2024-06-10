@@ -35,7 +35,9 @@ To do this, we need to establish a few key facts first:
 
 ::: {layout-ncol=2}
 ![](media/cdisc.png){width=40% height=40%}
-![](media/lego.png){width=40% height=40%}
+
+![](media/lego.png){width=20% height=20%}
+
 :::
 
 ::: notes
@@ -74,20 +76,58 @@ Introduce Admiral and Pharmaverse as pioneering open-source efforts in pharma, a
 Outline strategies for fostering cross-company collaboration, such as transparency, dedicated resource allocation, and navigating legal considerations.
 :::
 
-## Admiralvaccines (3min)
+## A success story: {admiralvaccine}
 
-- NOT principally led by Roche or GSK, but Pfizer - so they were empowered to set something up through our fit for purpose framework.
-- Mention that this was pandemic-driven - expand on this
-- Lessons learned - good and bad
+- The COVID-19 pandemic was a worldwide catastrophe, but it was also an opportunity to **collaborate further** within pharma...
+- ... Enter {admiralvaccine}!
 
-::: notes
-Highlight the collaborative effort behind Admiralvaccines, led by Pfizer, and reflect on the lessons learned during the pandemic.
+::: {layout-ncol=2}
+![](media/covid.jpg){width=40% height=40%}
+
+![](media/admiralvaccine.png){width=15% height=15%}
 :::
 
-## What's coming next? (1min)
+::: notes
+Section duration: 3 min
 
-- AI - all our docs are OS so AI should be able to learn admiral easily!
+One of the greatest successes of our cross-company collaboration lies in the story behind the creation of an admiral extension package to deal with vaccine data. 
+
+To set the scene for you all, within the pharmaceutical industry and the wider world there was a great deal of interest in the area of vaccines during the period between 2020 and 2023 (for obvious reasons). From the outside, we all saw how quickly companies like Pfizer, Moderna and Astra Zeneca were able to bring Covid-19 vaccines to market. You will all appreciate that within the pharma industry, this required huge efforts all areas of drug development, one of which naturally was the creation of vaccine-specific ADaM datasets. 
+
+To cut a long story short, the atmosphere of cross-company collaboration and the contribution framework that we had set up within the {admiral} family meant that we in the {admiral} family were able to connect with programmers from Pfizer, which was a company that had not meaningfully contributed to the open-source {admiral} efforts previously, and empower them take the lead on the creation of {admiralvaccine} - a vaccine-specific extension to {admiral}. The package was co-developed in partnership with two other big pharma companies GSK and Novartis, as well as members of the core {admiral} team who supported the upskilling of this new team and ensured package contents was up to par with our standards. The {admiralvaccine} package released its first version in the summer of 2023, and enabled the sponsor companies to share and open-source many of the vaccine-related learnings they had acquired during the pandemic, and we firmly believe that this will foster even more cross-industry collaborations to tackle any challenges the future might hold.
+
+We should stress that not all aspects of this experience were strictly positive: one chief observation we made was that the team behind the vaccines package was laser-focused on releasing a first version of {admiralvaccine}, but lost lots of interest as the time came to later maintain the package. Maybe this was a by-product of the huge drive and pressure to deliver in the short term that those involved had experienced when working on the vaccines themselves. Consequently within the core {admiral} team we had to work with the {admiralvaccine} leads to convey the importance of package maintenance, and this is an area that we are still working on to this day.
+
+:::
+
+## {admiral}: Looking ahead 
+
+Training models on {admrial} documentation: could AI be the next frontier?
+
+::: {layout-ncol=2}
+![](media/admiral_website.png){width=15% height=15%}
+
+![](media/ai.png){width=20% height=20%}
+
+:::
 
 ::: notes
-Discuss future directions, such as the potential for AI to leverage the open-source nature of Admiral for advanced learning and automation.
+Section duration {1 min}
+
+Similar to {dplyr}, the core {admiral} package has now reached a point of maturity and stability, where we do not anticipate the need for large overhauls of our material in the future. At the same time, our documentation has undergone many rounds of review and is robust and extensive. Industry uptake is contantly on the rise and we see a near future where it is **the** default solution for ADaM creation.
+
+As such, one avenue for improvement in the future is with regards to the learning curve required to get used to the package. AI is all the rage right now, so why not try to apply it to {admiral} as well? At the moment, there are efforts internally at various companies to train LLMs and chatbots on {admiral} documentation, which have proven quite fruitful. There hasn't yet been an Open Source effort in this space, though it is true that because everything is Open Source, the next re-training of something like Chat GPT may suddenly result in the model being an expert on ADaM creation!
+
+So, we are very excited for what the future holds!
+
+_Note: could also talk about automation efforts for {admiral}, but wery of time and having to descrive things like specs first._
 :::
+
+## Q&A and Resources
+
+::: notes
+Add: admiral website, cheat sheet, anything else?
+:::
+
+
+
