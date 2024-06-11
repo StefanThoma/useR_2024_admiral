@@ -10,8 +10,6 @@ editor: visual
 
 ## Another side to "Big Pharma"?
 
-<br>
-
 ![](media/evil_scientist.jpg){fig-align="center" width=60% height=60%}
 
 ::: notes
@@ -26,6 +24,7 @@ To do this, we need to establish a few key facts first:
 * Historically, pharma companies have been very protective of both their clinical trial data - which makes total sense - but also their code, i.e. what they use to analyse their ongoing trials. This has resulted in lots of companies independently developing toolsets that effectively carry out very similar purposes.
 
 * These toolsets were primarily written in SAS, a statistical software which has been industry-standard for 20+ years.
+
 :::
 
 ## What is ADaM, and why {admiral}?
@@ -56,15 +55,118 @@ We also don't need to go into too much detail about what ADaM datasets actually 
 Consequently, it stands to reason that if ever a tool (or package) could exist to aid in the generation of these ADaMs, this tool could be modular: various derivations could be chained together like  and customised to generate your dataset of interest. Ideally, this package would also interact seamlessly with the {tidyverse}, so that if ever a step for adding a new variable was trivial, then simple {dplyr} code could be slotted in to your derivation sequence. This idea is exactly the thought behind the inception of the {admiral} package.
 :::
 
-## How admiral was thought up, and later pharmaverse (5min)
+## {admiral}
 
-- Open Source from the very beginning
-- First of its kind in open source pharma
-- Why working in R makes this sort of thing much easier than SAS
+:::: {.columns}
+
+::: {.column width=60%}
+
+- **Modular functions** extending dplyr, and **manuals** and **templates**
+  - Core functionality that can be extended to specific therapeutic areas
+  - Specific to very standardized data and processes
+- Created by users for users
+
+:::
+
+
+::: {.column width=40%}
+
+![](media/admiral.png)
+
+:::
+
+::::
 
 ::: notes
-Introduce Admiral and Pharmaverse as pioneering open-source efforts in pharma, and discuss the advantages of using R over SAS.
+
+In my view, admiral brings to the table three types of technical value. 
+- First and most obvious: admiral provides a modular framework for data manipulation that is tailored to the creation of ADaM data sets.
+The value of admiral is not just the functions though, but also the extensive manuals that describe the programming processes and the templates that give a good starting point for creating different types of ADaM data sets.
+
+Additionally, the community of users and developers, and the fact that these two overlap is another benefit. 
+This allows for efficient development and very short feedback lines.
+
+
 :::
+
+<!-- maybe not needed!  -->
+<!-- ## Origin of {admiral} -->
+<!-- :::: {.columns} -->
+
+<!-- ::: {.column width=60%} -->
+
+<!-- - Open Source from the very beginning -->
+<!-- - First of its kind in open source pharma -->
+<!-- - Starting point of the [pharmaverse](https://pharmaverse.org/) -->
+
+<!-- ::: -->
+
+
+<!-- ::: {.column width=40%} -->
+
+
+<!-- ![](media/pharmaverse.png) -->
+
+<!-- ::: -->
+
+<!-- :::: -->
+
+<!-- ::: notes -->
+<!-- Introduce Admiral and Pharmaverse as pioneering open-source efforts in pharma, and discuss the advantages of using R over SAS. -->
+<!-- ::: -->
+
+## Scope of {admiral}
+- Establish {admiral} workflow as *the* standard for ADaM creation
+  - Build trust
+  - Split into core and extension packages
+
+
+:::notes
+- Establish {admiral} workflow as *the* standard for ADaM creation
+both across the industry and across all therapeutic areas
+
+This means that other companies must trust the product, as switching to R is no small feat. 
+We must provide a stable solution that is accepted by regulators
+that will not be abandoned anytime soon
+
+Would not want to again develop all the same functionalities within different companies
+
+:::
+
+## Trust
+
+- Open source from the start 
+- Involve community early on
+  - Serve the needs of many, not just of one company
+- Started as a collaboration of GSK and Roche
+  - Commitment and funding from both Roche and GSK makes it hard to ignore
+  - Hard for either company to monetize
+  - Ensures that the package stays open source and free to use
+  - Maintenance
+
+## Align extension packages with {admiral}:  Aim
+
+- Same user “feel” & language
+- Compatible modularity
+- Same development practices
+- Stability and trust
+    - if there is a bad admiral package out there this will erode trust also in the core package, as differentiation is not easy / sensible
+    - eroding trust means less users and less adoption of open source in the industry
+    
+::: notes
+
+:::
+## Align extension packages with {admiral}: Learnings
+ Strategies to get there: 
+- Instructions
+    - admiraldevs rules & templates
+    - Git Structure
+        - CICD
+    - one core member will be part of the new extension to either work or regularly consult
+- Expectation management:
+    - Small scope!
+    - Effort required
+    - Assigned FTE
 
 ## How to foster cross-company collaboration (5min)
 
@@ -73,6 +175,8 @@ Introduce Admiral and Pharmaverse as pioneering open-source efforts in pharma, a
 - Legal considerations?
 
 ::: notes
+
+This could maybe go into the previous slide
 Outline strategies for fostering cross-company collaboration, such as transparency, dedicated resource allocation, and navigating legal considerations.
 :::
 
@@ -102,7 +206,7 @@ We should stress that not all aspects of this experience were strictly positive:
 
 ## {admiral}: Looking ahead 
 
-Training models on {admrial} documentation: could AI be the next frontier?
+Training models on {admrial} documentation: could genAI be the next frontier?
 
 ::: {layout-ncol=2}
 ![](media/admiral_website.png){width=15% height=15%}
