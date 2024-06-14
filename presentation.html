@@ -12,7 +12,7 @@
 
   <meta name="author" content="Stefan Thoma">
   <meta name="author" content="Edoardo Mancini">
-  <meta name="dcterms.date" content="2024-06-11">
+  <meta name="dcterms.date" content="2024-06-14">
   <title>admiral - The dplyr of the pharmaceutical industry?</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -342,7 +342,7 @@ Edoardo Mancini
 </div>
 </div>
 
-  <p class="date">2024-06-11</p>
+  <p class="date">2024-06-14</p>
 </section>
 <section id="another-side-to-big-pharma" class="slide level2">
 <h2>Another side to “Big Pharma”?</h2>
@@ -424,12 +424,12 @@ Edoardo Mancini
 <li>Created by users for users</li>
 </ul>
 </div><div class="column" style="width:40%;">
-<p><img data-src="media/admiral.png"></p>
+<p><img data-src="media/cheat_sheet.png"></p>
 </div>
 </div>
 <aside class="notes">
-<p>In my view, admiral brings to the table three types of technical value. - First and most obvious: admiral provides a modular framework for data manipulation that is tailored to the creation of ADaM data sets. The value of admiral is not just the functions though, but also the extensive manuals that describe the programming processes and the templates that give a good starting point for creating different types of ADaM data sets.</p>
-<p>Additionally, the community of users and developers, and the fact that these two overlap is another benefit. This allows for efficient development and very short feedback lines.</p>
+<p>In my view, admiral brings to the table three types of technical value. First and most obvious: admiral provides a modular framework for data manipulation that extends the functionalities of <code>dplyr</code> and is tailored to the creation of ADaM data sets. You can see on the right side an example of how this works. But the value of admiral is not just the functions. It also offers extensive manuals and vignettes that describe the programming processes <em>and</em> the CDISC data standard mindset behind it. In a way, it serves as an extension to the CDISC implementation guides. And to save a lot of time, it also provides templates for the different types of ADaM datasets that serve as a very practical starting point for ADaM programming.</p>
+<p>Aside from the technical aspects, the open source nature of the project facilitated the emergence of an admiral community. This community is active both on github and on our slack channel and consists of both users and developers. The fact that these two overlap is another benefit. This allows for efficient development and very short feedback lines.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -441,21 +441,6 @@ Edoardo Mancini
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- maybe not needed!  -->
-<!-- ## Origin of {admiral} -->
-<!-- :::: {.columns} -->
-<!-- ::: {.column width=60%} -->
-<!-- - Open Source from the very beginning -->
-<!-- - First of its kind in open source pharma -->
-<!-- - Starting point of the [pharmaverse](https://pharmaverse.org/) -->
-<!-- ::: -->
-<!-- ::: {.column width=40%} -->
-<!-- ![](media/pharmaverse.png) -->
-<!-- ::: -->
-<!-- :::: -->
-<!-- ::: notes -->
-<!-- Introduce Admiral and Pharmaverse as pioneering open-source efforts in pharma, and discuss the advantages of using R over SAS. -->
-<!-- ::: -->
 </section>
 <section id="scope-of-admiral" class="slide level2">
 <h2>Scope of {admiral}</h2>
@@ -467,11 +452,9 @@ Edoardo Mancini
 </ul></li>
 </ul>
 <aside class="notes">
-<ul>
-<li>Establish {admiral} workflow as <em>the</em> standard for ADaM creation both across the industry and across all therapeutic areas</li>
-</ul>
-<p>This means that other companies must trust the product, as switching to R is no small feat. We must provide a stable solution that is accepted by regulators that will not be abandoned anytime soon</p>
-<p>Would not want to again develop all the same functionalities within different companies</p>
+<p>What we would like to achieve with admiral is that it is established as <em>the</em> standard tool for ADaM creation in R. Not just across the all therapeutic areas, but also across the pharmaceutical industry. This should help ease the transition of pharmaceutical companies towards an open source workflow for clinical data science.</p>
+<p>For that to happen, other companies must trust the product, as switching to R is a very big challenge for companies with a history of relying on licensed analysis software. We must provide a stable solution that is accepted by regulators, and user friendly, and we must ensure that such a project will not be abandoned anytime soon.</p>
+<p>The decision to split admiral into one core package and multiple therapeutic area specific extension packages was a way to ensure that resources for admiral are concentrated on the core values at first.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -484,14 +467,9 @@ Edoardo Mancini
           display:block!important;
       }</style></aside>
 </section>
-<section id="trust" class="slide level2">
+<section id="trust" class="slide level2 smaller">
 <h2>Trust</h2>
 <ul>
-<li>Open source from the start</li>
-<li>Involve community early on
-<ul>
-<li>Serve the needs of many, not just of one company</li>
-</ul></li>
 <li>Started as a collaboration of GSK and Roche
 <ul>
 <li>Commitment and funding from both Roche and GSK makes it hard to ignore</li>
@@ -499,22 +477,15 @@ Edoardo Mancini
 <li>Ensures that the package stays open source and free to use</li>
 <li>Maintenance</li>
 </ul></li>
-</ul>
-</section>
-<section id="align-extension-packages-with-admiral-aim" class="slide level2">
-<h2>Align extension packages with {admiral}: Aim</h2>
+<li>Open source from the start</li>
+<li>Involve community early on
 <ul>
-<li>Same user “feel” &amp; language</li>
-<li>Compatible modularity</li>
-<li>Same development practices</li>
-<li>Stability and trust
-<ul>
-<li>if there is a bad admiral package out there this will erode trust also in the core package, as differentiation is not easy / sensible</li>
-<li>eroding trust means less users and less adoption of open source in the industry</li>
+<li>Serve the needs of many, not just of one company</li>
 </ul></li>
 </ul>
 <aside class="notes">
-
+<p>As trust is so important for this project, I want to share what helped us establish this in the first place. So, admiral was co-developed by GSK and Roche as a collaboration. Having such large companies back the admiral project helped it being taken serious from the start. Very early on, we were able to ask many programmers across the industry to experiment with and give feedback on the prototype admiral package. That was very valuable, as it showed us that other companies were interested as well.</p>
+<p>Sharing the license between two companies also makes it much harder to monetize for any company on its own. This is a good thing, as other companies probably would not like to jump on a package that might get put behind a pay wall later. These big names also help as package maintenance will come up at one point in the package life cycle, and abandoning a package is much harder if a companies reputation is somehow tied to it.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -527,19 +498,54 @@ Edoardo Mancini
           display:block!important;
       }</style></aside>
 </section>
-<section id="align-extension-packages-with-admiral-learnings" class="slide level2">
-<h2>Align extension packages with {admiral}: Learnings</h2>
-<p>Strategies to get there: - Instructions - admiraldevs rules &amp; templates - Git Structure - CICD - one core member will be part of the new extension to either work or regularly consult - Expectation management: - Small scope! - Effort required - Assigned FTE</p>
-</section>
-<section id="how-to-foster-cross-company-collaboration-5min" class="slide level2">
-<h2>How to foster cross-company collaboration (5min)</h2>
+<section id="alignment-of-extension-packages" class="slide level2">
+<h2>Alignment of extension packages</h2>
 <ul>
-<li>“Showing your hand” first</li>
-<li>Assigning people with significant time percentages to OS work</li>
-<li>Legal considerations?</li>
+<li>Same user “feel” &amp; language</li>
+<li>Same development practices</li>
+<li>Compatible modularity</li>
+<li>Stability and trust
+<ul>
+<li>Shabby {admiral} extension package harms reputation of {admiral}</li>
+<li>Less trust means less users and less adoption of open source in the industry</li>
+</ul></li>
 </ul>
 <aside class="notes">
-<p>This could maybe go into the previous slide Outline strategies for fostering cross-company collaboration, such as transparency, dedicated resource allocation, and navigating legal considerations.</p>
+<p>An extension package extends the core functionality of admiral to a specific therapeutic area. This could be for example admiral_onco admiral_vaccine, or admiral_ophtha. We want those packages to exist and be successful, but the core team does not have the capacity or the therapeutic area knowledge to take on the development of these packages.</p>
+<p>Yet, we have certain expectations of the extension packages: The package usage, interface and layout should look and feel coherent with the core package. Once a user is familiar with the core package, they should be able to pick up any extension package quickly. This coherence should not only be on the user level. The same should go for developers: Code should follow the same standards and practices. If a function already exists in the core package it should not be re-implemented in the extension package. Further, all admiral packages need to be able to work together seamlessly.</p>
+<p>Most importantly, the package needs to function reliably. Having a sub-standard extension package would reflect badly on teh core package as well. This could erode trust and hinder the adoption of open source practices in the pharmaceutical industry.</p>
+<p>High goals. But how do we get there?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="learnings" class="slide level2">
+<h2>Learnings</h2>
+<ul>
+<li>Instructions
+<ul>
+<li>{admiraldev} rules &amp; templates</li>
+<li>Git Structure &amp; CICD</li>
+<li>One core member representative</li>
+</ul></li>
+<li>Expectation management:
+<ul>
+<li>Small scope!</li>
+<li>Effort required</li>
+<li>Assigned FTE</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>Extension packages are developed in something like a franchise model. We took away two main points. One: We must give very clear instructions and structure to the extension developers. <code>admiraldev</code> is a separate package that was created specifically for admiral developers. It lists detailed instructions for code-style, naming and coding conventions, even helper functions and much more. We also provide github templates and CICD workflows that ensure certain standards like code styling, link checking, test coverage, etc. While those two things go a long way, the most resource intensive approach to this franchising is that one member of the core team acts as a representative who is either directly involved in the extension development, or is involved in a consulting function.</p>
+<p>The second important learning is the management of expectation for the extension development teams. We have to make sure that a new team carefully considers the scope of their project. It should be well defined and achieveable. They have to think about the effort required to get there, and whether they can bring enough resources to the table to achieve that. Ideally, a certain amount of working percentages should be assigned to the task, and the workload should be shared across different companies. And most importantly, it should be clear to the team that this will require ongoing efforts: Even after most of the goals are implemented, the package needs to be maintained and periodically updated. It needs to be kept in line with the core admiral package, with the most current version of other packages it relies on, and also with changes in data standards, to remain useful to programmers.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -604,7 +610,7 @@ Edoardo Mancini
 <p>Similar to {dplyr}, the core {admiral} package has now reached a point of maturity and stability, where we do not anticipate the need for large overhauls of our material in the future. At the same time, our documentation has undergone many rounds of review and is robust and extensive. Industry uptake is contantly on the rise and we see a near future where it is <strong>the</strong> default solution for ADaM creation.</p>
 <p>As such, one avenue for improvement in the future is with regards to the learning curve required to get used to the package. AI is all the rage right now, so why not try to apply it to {admiral} as well? At the moment, there are efforts internally at various companies to train LLMs and chatbots on {admiral} documentation, which have proven quite fruitful. There hasn’t yet been an Open Source effort in this space, though it is true that because everything is Open Source, the next re-training of something like Chat GPT may suddenly result in the model being an expert on ADaM creation!</p>
 <p>So, we are very excited for what the future holds!</p>
-<p><em>Note: could also talk about automation efforts for {admiral}, but wery of time and having to descrive things like specs first.</em></p>
+<p><em>Note: could also talk about automation efforts for {admiral}, but weary of time and having to descrive things like specs first.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -620,7 +626,7 @@ Edoardo Mancini
 <section id="qa-and-resources" class="slide level2">
 <h2>Q&amp;A and Resources</h2>
 <aside class="notes">
-<p>Add: admiral website, cheat sheet, anything else?</p>
+<p>Add: admiral website, cheat sheet, anything else? Mention the Blog as well.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -847,6 +853,44 @@ Edoardo Mancini
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
