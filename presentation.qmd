@@ -227,7 +227,7 @@ We should stress that not all aspects of this experience were strictly positive:
 
 ## {admiral}: Looking ahead 
 
-Training models on {admrial} documentation: could genAI be the next frontier?
+Training models on {admiral} documentation: could genAI be the next frontier?
 
 ::: {layout-ncol=2}
 ![](media/admiral_website.png){width=15% height=15%}
