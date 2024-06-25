@@ -6,7 +6,7 @@ author:
  - Edoardo Mancini
 date: today
 format: revealjs
-logo: media/admiral.png
+logo: media/roche.png
 ---
 
 ## Another side to "Big Pharma"?
@@ -65,7 +65,7 @@ Consequently, it stands to reason that if ever a tool (or package) could exist t
 :::
 
 ::: {.column width="40%"}
-![](media/cheat_sheet.png)
+![](media/admiral.png)
 :::
 :::
 
@@ -75,6 +75,120 @@ Section duration: 2 min
 In my view, admiral brings to the table three types of technical value. First and most obvious: admiral provides a modular framework for data manipulation that extends the functionalities of `dplyr` and is tailored to the creation of ADaM data sets. You can see on the right side an example of how this works. But the value of admiral is not just the functions. It also offers extensive manuals and vignettes that describe the programming processes *and* the CDISC data standard mindset behind it. In a way, it serves as an extension to the CDISC implementation guides. And to save a lot of time, it also provides templates for the different types of ADaM datasets that serve as a very practical starting point for ADaM programming.
 
 Aside from the technical aspects, the open source nature of the project facilitated the emergence of an admiral community. This community is active both on github and on our slack channel and consists of both users and developers. The fact that these two overlap is another benefit. This allows for efficient development and very short feedback lines.
+:::
+
+## {admiral} code example {.smaller}
+
+
+::: columns
+
+::: {.column width="60%"}
+
+```{r}
+#| eval: False
+#| include: True
+#| echo: True
+#| code-line-numbers: "1|2,3,4,5,6,7"
+adae_dates <- ae %>%
+  # join ADSL to AE
+  derive_vars_merged(
+    dataset_add = adsl,
+    new_vars = adsl_derv_vars,
+    by_vars = get_admiral_option("subject_keys")
+  ) %>%
+  # analysis end date/time (AENDTM), imputation flags (AENDTF/AENTMF)
+  slice_derivation(
+    derivation = derive_vars_dtm,
+    args = params(
+      dtc = AEENDTC,
+      new_vars_prefix = "AEN",
+      date_imputation = "last",
+      time_imputation = "last",
+      preserve = TRUE
+    ),
+    derivation_slice(
+      filter = AEOUT == "FATAL",
+      args = params(
+        highest_imputation = "Y",
+        max_dates = exprs(DTHDT)
+      )
+    ),
+    derivation_slice(
+      filter = TRUE,
+      args = params(
+        highest_imputation = "M",
+        max_dates = NULL
+      )
+    )
+  )
+```
+
+:::
+
+::: {.column width="40%"} 
+
+![](media/derive_vars_merged.png)
+
+
+:::
+
+:::
+
+## {admiral} code example {.smaller}
+
+
+::: columns
+
+::: {.column width="60%"}
+
+```{r}
+#| eval: False
+#| include: True
+#| echo: True
+#| code-line-numbers: "8,9,10,11,12,13,14,15,16,17|18,19,20,21,22,23|31,25,26,27,28,29,30"
+adae_dates <- ae %>%
+  # join ADSL to AE
+  derive_vars_merged(
+    dataset_add = adsl,
+    new_vars = adsl_derv_vars,
+    by_vars = get_admiral_option("subject_keys")
+  ) %>%
+  # analysis end date/time (AENDTM), imputation flags (AENDTF/AENTMF)
+  slice_derivation(
+    derivation = derive_vars_dtm,
+    args = params(
+      dtc = AEENDTC,
+      new_vars_prefix = "AEN",
+      date_imputation = "last",
+      time_imputation = "last",
+      preserve = TRUE
+    ),
+    derivation_slice(
+      filter = AEOUT == "FATAL",
+      args = params(
+        highest_imputation = "Y",
+        max_dates = exprs(DTHDT)
+      )
+    ),
+    derivation_slice(
+      filter = TRUE,
+      args = params(
+        highest_imputation = "M",
+        max_dates = NULL
+      )
+    )
+  )
+```
+
+:::
+
+::: {.column width="40%"} 
+
+![](media/slice_derivation.png)
+
+
+:::
+
 :::
 
 ## Goal of {admiral}
@@ -94,6 +208,8 @@ For that to happen, other companies must trust the product, as switching to R is
 
 Lets talk about how we get to that point.
 :::
+
+
 
 ## Building trust {.smaller}
 
