@@ -1,16 +1,14 @@
 ---
-title: "`admiral` - The `dplyr` of the pharmaceutical industry?"
+title: "`admiral`"
+subtitle: "`dplyr` for the pharmaceutical industry?"
 author: 
  - Stefan Thoma
  - Edoardo Mancini
 date: today
 format: revealjs
-editor: visual
 ---
 
 ## Another side to "Big Pharma"?
-
-<br>
 
 ![](media/evil_scientist.jpg){fig-align="center" width=60% height=60%}
 
@@ -26,6 +24,7 @@ To do this, we need to establish a few key facts first:
 * Historically, pharma companies have been very protective of both their clinical trial data - which makes total sense - but also their code, i.e. what they use to analyse their ongoing trials. This has resulted in lots of companies independently developing toolsets that effectively carry out very similar purposes.
 
 * These toolsets were primarily written in SAS, a statistical software which has been industry-standard for 20+ years.
+
 :::
 
 ## What is ADaM, and why {admiral}?
@@ -53,29 +52,165 @@ We also don't need to go into too much detail about what ADaM datasets actually 
 * Adding derived records based on existing ones
 * Converting character strings to dates and imputing missing values
 
-Consequently, it stands to reason that if ever a tool (or package) could exist to aid in the generation of these ADaMs, this tool could be modular: various derivations could be chained together like  and customised to generate your dataset of interest. Ideally, this package would also interact seamlessly with the {tidyverse}, so that if ever a step for adding a new variable was trivial, then simple {dplyr} code could be slotted in to your derivation sequence. This idea is exactly the thought behind the inception of the {admiral} package.
+Consequently, it stands to reason that if ever a tool (or package) could exist to aid in the generation of these ADaMs, this tool could be modular: various derivations could be chained together and customised to generate your dataset of interest. Ideally, this package would also interact seamlessly with the {tidyverse}, so that if ever a step for adding a new variable was trivial, then simple {dplyr} code could be slotted in to your derivation sequence. This idea is exactly the thought behind the inception of the {admiral} package.
 :::
 
-## How admiral was thought up, and later pharmaverse (5min)
+## {admiral}
 
-- Open Source from the very beginning
-- First of its kind in open source pharma
-- Why working in R makes this sort of thing much easier than SAS
+:::: {.columns}
+
+::: {.column width=60%}
+
+- **Modular functions** extending dplyr, and **manuals** and **templates**
+  - Core functionality that can be extended to specific therapeutic areas
+  - Specific to very standardized data and processes
+- Created by users for users
+
+
+:::
+
+
+::: {.column width=40%}
+
+![](media/cheat_sheet.png)
+
+:::
+
+::::
 
 ::: notes
-Introduce Admiral and Pharmaverse as pioneering open-source efforts in pharma, and discuss the advantages of using R over SAS.
+Section duration: 2 min
+
+In my view, admiral brings to the table three types of technical value. 
+First and most obvious: admiral provides a modular framework for data manipulation that extends the functionalities of `dplyr` and is tailored to the creation of ADaM data sets.
+You can see on the right side an example of how this works.
+But the value of admiral is not just the functions. 
+It also offers extensive manuals and vignettes that describe the programming processes *and* the CDISC data standard mindset behind it. 
+In a way, it serves as an extension to the CDISC implementation guides.
+And to save a lot of time, it also provides templates for the different types of ADaM datasets that serve as a very practical starting point for ADaM programming. 
+
+Aside from the technical aspects, the open source nature of the project facilitated the emergence of an admiral community.
+This community is active both on github and on our slack channel and consists of both users and developers.
+The fact that these two overlap is another benefit. 
+This allows for efficient development and very short feedback lines.
+
 :::
 
-## How to foster cross-company collaboration (5min)
 
-- "Showing your hand" first
-- Assigning people with significant time percentages to OS work
-- Legal considerations?
+## Goal of {admiral}
+- Establish {admiral} workflow as *the* standard for ADaM creation
+  - Build trust
+
 
 ::: notes
-Outline strategies for fostering cross-company collaboration, such as transparency, dedicated resource allocation, and navigating legal considerations.
+Section duration: 1 min
+
+
+What we would like to achieve with admiral is that it is established as *the* standard tool for ADaM creation in R. 
+Not just across the all therapeutic areas, but also across the pharmaceutical industry. 
+This should help ease the transition of pharmaceutical companies towards an open source workflow for clinical data science. 
+
+For that to happen, other companies must trust the product, as switching to R is a very big challenge for companies with a history of relying on licensed analysis software. 
+We must provide a stable solution that is accepted by regulators, and user friendly, and we must ensure that such a project will not be abandoned anytime soon.
+
+Lets talk about how we get to that point.
+
 :::
 
+## Building trust {.smaller}
+
+- Started as a collaboration of GSK and Roche
+  - Commitment and funding from both Roche and GSK makes it hard to ignore
+  - Hard for either company to monetize
+  - Ensures that the package stays open source and free to use
+  - Maintenance
+- Open source from the start 
+- Involve community early on
+  - Serve the needs of many, not just of one company
+  
+::: notes
+Section duration: 1:30 min
+
+As trust is so important for this project, I want to share what helped us establish this in the first place. 
+To begin with, admiral was co-developed by GSK and Roche as a collaboration.
+Having such large companies back the admiral project early on (i.e. assigning meaningful percentages of programmers' time to this open sourced project) helped it to be taken seriously from the start. 
+Very early on, we were able to ask many programmers across the industry to experiment with and give feedback on the prototype admiral package.
+That was very valuable, as it showed us that other companies were interested as well. 
+
+Sharing the license between two companies also makes it much harder to monetize for any company on its own. 
+This is a good thing, as other companies probably would not like to jump on a package that might get put behind a pay wall later.
+These big names also help as package maintenance will come up at one point in the package life cycle, and abandoning a package is much harder if a companies reputation is somehow tied to it.
+
+:::
+
+## Extension packages
+
+
+- Same user “feel” & language
+- Same development practices
+- Compatible modularity
+- Stability and trust
+    - Shabby {admiral} extension package harms reputation of {admiral}
+    - Less trust means less users and less adoption of open source in the industry
+    
+::: notes
+Section duration: 2:30 min
+
+The decision to split admiral into one core package and multiple therapeutic area specific extension packages was a way to ensure that resources for admiral are concentrated on the core values at first. 
+
+An extension package extends the core functionality of admiral to a specific therapeutic area. 
+This could be for example admiral_onco admiral_vaccine, or admiral_ophtha.
+We want those packages to exist and be successful, but the core team does not have the capacity or the therapeutic area knowledge to take on the development of these packages.
+We even want them to exist for therapeutic areas where Roche is not even active yet.
+
+But we also have high expectations of the extension packages: 
+The package usage, interface and layout should look and feel coherent with the core package. Once a user is familiar with the core package, they should be able to pick up any extension package quickly.
+This coherence should not only be on the user level. 
+The same should go for developers: 
+Code should follow the same standards and practices. 
+And it should not be redundant: 
+If a function already exists in the core package it should not be re-implemented in the extension package.
+Further, all admiral packages need to be able to work together seamlessly.
+
+Most importantly, the package needs to function reliably. 
+Having a sub-standard extension package would reflect badly on the core package as well. This could erode trust and hinder the adoption of open source practices in the pharmaceutical industry.
+
+High goals. But how do we get there?
+:::
+
+## Setting them up for Success
+
+- Instructions
+    - {admiraldev} rules & templates
+    - Git Structure & CICD
+    - One core member representative
+- Expectation management:
+    - Small scope!
+    - Effort required
+    - Assigned FTE
+
+::: notes
+Section duration: 2:45 min
+
+Extension packages are developed in something like a franchise model.
+We took away two main points. 
+One: 
+We must give very clear instructions and structure to the extension developers. 
+`admiraldev` is a separate package that was created specifically for admiral developers. 
+It lists detailed instructions for code-style, naming and coding conventions, even helper functions and much more.
+We also provide github templates and CICD workflows that ensure certain standards like code styling, link checking, test coverage, etc. 
+While those two things go a long way, the most resource intensive approach to this franchising is that one member of the core team acts as a representative who is either directly involved in the extension development, or is involved in a consulting function. 
+
+The second important learning is the management of expectation for the extension development teams. 
+We have to make sure that a new team carefully considers the scope of their project. 
+It should be well defined and achieveable. 
+They have to think about the effort required to get there, and whether they can bring enough resources to the table to achieve that. 
+Ideally, a certain amount of working percentages should be assigned to the task, and the workload should be shared across different companies. 
+And most importantly, it should be clear to the team that this will require ongoing efforts: 
+Even after most of the goals are implemented, the package needs to be maintained and periodically updated. 
+It needs to be kept in line with the core admiral package, with the most current version of other packages it relies on, and also with changes in data standards, to remain useful to programmers. 
+
+:::
 ## A success story: {admiralvaccine}
 
 - The COVID-19 pandemic was a worldwide catastrophe, but it was also an opportunity to **collaborate further** within pharma...
@@ -102,7 +237,7 @@ We should stress that not all aspects of this experience were strictly positive:
 
 ## {admiral}: Looking ahead 
 
-Training models on {admrial} documentation: could AI be the next frontier?
+Training models on {admiral} documentation: could genAI be the next frontier?
 
 ::: {layout-ncol=2}
 ![](media/admiral_website.png){width=15% height=15%}
@@ -120,13 +255,14 @@ As such, one avenue for improvement in the future is with regards to the learnin
 
 So, we are very excited for what the future holds!
 
-_Note: could also talk about automation efforts for {admiral}, but wery of time and having to descrive things like specs first._
+_Note: could also talk about automation efforts for {admiral}, but weary of time and having to descrive things like specs first._
 :::
 
 ## Q&A and Resources
 
 ::: notes
 Add: admiral website, cheat sheet, anything else?
+Mention the Blog as well.
 :::
 
 
