@@ -197,7 +197,6 @@ adae_dates <- ae %>%
     -   building trust in {admiral}
     -   encouraging R adoption across the industry
 
-**trust fall img**
 
 ::: notes
 Section duration: 1 min
