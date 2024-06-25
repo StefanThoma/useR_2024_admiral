@@ -130,7 +130,7 @@ The decision to split admiral into one core package and multiple therapeutic are
 
 As trust is so important for this project, I want to share what helped us establish this in the first place. 
 To begin with, admiral was co-developed by GSK and Roche as a collaboration.
-Having such large companies back the admiral project helped it being taken serious from the start. 
+Having such large companies back the admiral project early on (i.e. assigning meaningful percentages of programmers' time to this open sourced project) helped it to be taken seriously from the start. 
 Very early on, we were able to ask many programmers across the industry to experiment with and give feedback on the prototype admiral package.
 That was very valuable, as it showed us that other companies were interested as well. 
 
