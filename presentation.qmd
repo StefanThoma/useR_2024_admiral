@@ -52,7 +52,7 @@ We also don't need to go into too much detail about what ADaM datasets actually 
 * Adding derived records based on existing ones
 * Converting character strings to dates and imputing missing values
 
-Consequently, it stands to reason that if ever a tool (or package) could exist to aid in the generation of these ADaMs, this tool could be modular: various derivations could be chained together like  and customised to generate your dataset of interest. Ideally, this package would also interact seamlessly with the {tidyverse}, so that if ever a step for adding a new variable was trivial, then simple {dplyr} code could be slotted in to your derivation sequence. This idea is exactly the thought behind the inception of the {admiral} package.
+Consequently, it stands to reason that if ever a tool (or package) could exist to aid in the generation of these ADaMs, this tool could be modular: various derivations could be chained together and customised to generate your dataset of interest. Ideally, this package would also interact seamlessly with the {tidyverse}, so that if ever a step for adding a new variable was trivial, then simple {dplyr} code could be slotted in to your derivation sequence. This idea is exactly the thought behind the inception of the {admiral} package.
 :::
 
 ## {admiral}
