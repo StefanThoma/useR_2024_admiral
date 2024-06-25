@@ -1,11 +1,12 @@
 ---
 title: "`admiral`"
-subtitle: "`dplyr` for the pharmaceutical industry?"
+subtitle: "The `dplyr` for the pharmaceutical industry?"
 author: 
  - Stefan Thoma
  - Edoardo Mancini
 date: today
 format: revealjs
+logo: media/admiral.png
 ---
 
 ## Another side to "Big Pharma"?
@@ -78,8 +79,11 @@ Aside from the technical aspects, the open source nature of the project facilita
 
 ## Goal of {admiral}
 
--   Establish {admiral} workflow as *the* standard for ADaM creation
-    -   Build trust
+-   Establish {admiral} workflow as *the* standard for ADaM creation by ...
+    -   building trust in {admiral}
+    -   encouraging R adoption across the industry
+
+**trust fall img**
 
 ::: notes
 Section duration: 1 min
@@ -116,15 +120,15 @@ Sharing the license between two companies also makes it much harder to monetize 
 -   Same development practices
 -   Compatible modularity
 -   Stability and trust
-    -   Shabby {admiral} extension package harms reputation of {admiral}
-    -   Less trust means less users and less adoption of open source in the industry
+    -   Below par {admiral} extension package harms reputation of {admiral}
+    -   Less trust means fewer users and less adoption of open source in the industry
 
 ::: notes
 Section duration: 2:30 min
 
 The decision to split admiral into one core package and multiple therapeutic area specific extension packages was a way to ensure that resources for admiral are concentrated on the core values at first.
 
-An extension package extends the core functionality of admiral to a specific therapeutic area. This could be for example admiral_onco admiral_vaccine, or admiral_ophtha. We want those packages to exist and be successful, but the core team does not have the capacity or the therapeutic area knowledge to take on the development of these packages. We even want them to exist for therapeutic areas where Roche is not even active yet.
+An extension package extends the core functionality of admiral to a specific therapeutic area. This could be for example admiral_onco admiral_vaccine, or admiral_ophtha. We want those packages to exist and be successful, but the core team does not have the capacity or the therapeutic area knowledge to take on the development of these packages. We even want them to exist for therapeutic areas where Roche & GSK are not even active yet.
 
 But we also have high expectations of the extension packages: The package usage, interface and layout should look and feel coherent with the core package. Once a user is familiar with the core package, they should be able to pick up any extension package quickly. This coherence should not only be on the user level. The same should go for developers: Code should follow the same standards and practices. And it should not be redundant: If a function already exists in the core package it should not be re-implemented in the extension package. Further, all admiral packages need to be able to work together seamlessly.
 
@@ -133,7 +137,7 @@ Most importantly, the package needs to function reliably. Having a sub-standard 
 High goals. But how do we get there?
 :::
 
-## Setting them up for Success
+## Setting them up for success
 
 -   Instructions
     -   {admiraldev} rules & templates
@@ -197,7 +201,7 @@ So, we are very excited for what the future holds!
 *Note: could also talk about automation efforts for {admiral}, but weary of time and having to descrive things like specs first.*
 :::
 
-## Q&A and Resources
+## Q&A and resources
 
 ::: notes
 Add: admiral website, cheat sheet, anything else? Mention the Blog as well.
