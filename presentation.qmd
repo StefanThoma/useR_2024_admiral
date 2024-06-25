@@ -165,7 +165,7 @@ If a function already exists in the core package it should not be re-implemented
 Further, all admiral packages need to be able to work together seamlessly.
 
 Most importantly, the package needs to function reliably. 
-Having a sub-standard extension package would reflect badly on teh core package as well. This could erode trust and hinder the adoption of open source practices in the pharmaceutical industry.
+Having a sub-standard extension package would reflect badly on the core package as well. This could erode trust and hinder the adoption of open source practices in the pharmaceutical industry.
 
 High goals. But how do we get there?
 :::
