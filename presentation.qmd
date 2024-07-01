@@ -199,6 +199,7 @@ adae_dates <- ae %>%
 
 -   15 pharma/biotech companies are already using {admiral}
 
+-   Part of overall effort to have an open source workflow for clinical data science, what we call the pharmaverse
 
 ::: notes
 Section duration: 1 min
