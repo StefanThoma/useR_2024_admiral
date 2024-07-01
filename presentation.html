@@ -456,7 +456,7 @@ Edoardo Mancini
 </div>
 <aside class="notes">
 <p>Section duration: 4 min</p>
-<p>In 2016, CDISC, which is an institution which sets data standards across the industry, introduced the Analysis Data Model, also known as ADaM. Without delving into too much detail, this can be thought of as a precise set of guidelines mandating the structure of the datasets that underpin clinical trial analysis. So, every company running a clinical trial after 2016 - no matter the therapeutic area - was now required to convert their collected, raw data into ADaM datasets prior to creating the tables, listings and graphs that will be used to evaluate the trial’s outcome.</p>
+<p>In 2016, the Food and Drug Administration (FDA) mandated the use of the Analysis Data Model, also known as ADaM, in clinical trials. Without delving into too much detail, this can be thought of as a precise set of guidelines mandating the structure of the datasets that underpin clinical trial analysis. So, every company running a clinical trial after 2016 - no matter the therapeutic area - was now required to convert their collected, raw data into ADaM datasets prior to creating the tables, listings and graphs that will be used to evaluate the trial’s outcome.</p>
 <p>Note that we are glossing over the fact that there exists an intermediate set of datasets called SDTM datasets between the raw datasets step and the ADaM step. This isn’t so relevant for our presentation, other than for the fact that it means the starting point for the ADaM datsets is also common across industry.</p>
 <p>We also don’t need to go into too much detail about what ADaM datasets actually look like, but it’s important to understand that the steps used to construct them are often dataset-agnostic. Some examples include:</p>
 <ul>
@@ -598,12 +598,13 @@ Edoardo Mancini
 <section id="goal-of-admiral" class="slide level2">
 <h2>Goal of {admiral}</h2>
 <ul>
-<li>Establish {admiral} workflow as <em>the</em> standard for ADaM creation by …
+<li><p>Establish {admiral} workflow as <em>the</em> standard for ADaM creation by …</p>
 <ul>
 <li>building trust in {admiral}</li>
 <li>encouraging R adoption across the industry</li>
 </ul></li>
-<li>15 pharma/biotech companies are already using {admiral}</li>
+<li><p>15 pharma/biotech companies are already using {admiral}</p></li>
+<li><p>Part of overall effort to have an open source workflow for clinical data science, what we call the pharmaverse</p></li>
 </ul>
 <aside class="notes">
 <p>Section duration: 1 min</p>
@@ -737,9 +738,9 @@ Edoardo Mancini
 <aside class="notes">
 <p>Section duration: 3 min</p>
 <p>One of the greatest successes of our cross-company collaboration lies in the story behind the creation of an admiral extension package to deal with vaccine data.</p>
-<p>To set the scene for you all, within the pharmaceutical industry and the wider world there was a great deal of interest in the area of vaccines during the period between 2020 and 2023 (for obvious reasons). From the outside, we all saw how quickly companies like Pfizer, Moderna and Astra Zeneca were able to bring Covid-19 vaccines to market. You will all appreciate that within the pharma industry, this required huge efforts all areas of drug development, one of which naturally was the creation of vaccine-specific ADaM datasets.</p>
+<p>To set the scene for you all, within the pharmaceutical industry and the wider world there was a great deal of interest in the area of vaccines during the period between 2020 and 2023 (for obvious reasons). From the outside, we all saw how quickly companies like Pfizer, Moderna and Astra Zeneca were able to bring Covid-19 vaccines to market. You will all appreciate that within the pharma industry, this required huge efforts in all areas of drug development, one of which naturally was the creation of vaccine-specific ADaM datasets.</p>
 <p>To cut a long story short, the atmosphere of cross-company collaboration and the contribution framework that we had set up within the {admiral} family meant that we in the {admiral} family were able to connect with programmers from Pfizer, which was a company that had not meaningfully contributed to the open-source {admiral} efforts previously, and empower them take the lead on the creation of {admiralvaccine} - a vaccine-specific extension to {admiral}. The package was co-developed in partnership with two other big pharma companies GSK and Novartis, as well as members of the core {admiral} team who supported the upskilling of this new team and ensured package contents was up to par with our standards. The {admiralvaccine} package released its first version in the summer of 2023, and enabled the sponsor companies to share and open-source many of the vaccine-related learnings they had acquired during the pandemic, and we firmly believe that this will foster even more cross-industry collaborations to tackle any challenges the future might hold.</p>
-<p>We should stress that not all aspects of this experience were strictly positive: one chief observation we made was that the team behind the vaccines package was laser-focused on releasing a first version of {admiralvaccine}, but lost lots of interest as the time came to later maintain the package. Maybe this was a by-product of the huge drive and pressure to deliver in the short term that those involved had experienced when working on the vaccines themselves. Consequently within the core {admiral} team we had to work with the {admiralvaccine} leads to convey the importance of package maintenance, and this is an area that we are still working on to this day.</p>
+<p>We should stress that not all aspects of this experience were strictly positive: one chief observation we made was that the team behind the vaccines package was laser-focused on releasing a first version of {admiralvaccine}, but engagement levels were lower once it came to maintaining the package. Maybe this was a by-product of the huge drive and pressure to deliver in the short term that those involved had experienced when working on the vaccines themselves. Consequently within the core {admiral} team we had to work with the {admiralvaccine} leads to convey the importance of package maintenance.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -767,6 +768,7 @@ Edoardo Mancini
 </div>
 <aside class="notes">
 <p>Section duration {1 min}</p>
+<p>We’ve talked a lot about the past and present of {admiral}, so we’d like to conclude about what’s next for the project.</p>
 <p>Similar to {dplyr}, the core {admiral} package has now reached a point of maturity and stability, where we do not anticipate the need for large overhauls of our material in the future. At the same time, our documentation has undergone many rounds of review and is robust and extensive. Industry uptake is contantly on the rise and we see a near future where it is <strong>the</strong> default solution for ADaM creation.</p>
 <p>As such, one avenue for improvement in the future is with regards to the learning curve required to get used to the package. AI is all the rage right now, so why not try to apply it to {admiral} as well? At the moment, there are efforts internally at various companies to train LLMs and chatbots on {admiral} documentation, which have proven quite fruitful. There hasn’t yet been an Open Source effort in this space, though it is true that because everything is Open Source, the next re-training of something like Chat GPT may suddenly result in the model being an expert on ADaM creation!</p>
 <p>So, we are very excited for what the future holds!</p>
