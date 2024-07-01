@@ -322,6 +322,14 @@ So, we are very excited for what the future holds!
 
 ## Q&A and resources
 
+()[bla ]
+- [{admiral}](https://github.com/pharmaverse/admiral)
+- [Cheat sheet](https://github.com/pharmaverse/admiral/blob/main/inst/cheatsheet/admiral_cheatsheet.pdf)
+- [{admiraldev}](https://github.com/pharmaverse/admiraldev)
+- [Pharmaverse blog](https://pharmaverse.github.io/blog/)
+- [Pharmaverse](https://pharmaverse.org/)
+- [CDISC](https://www.cdisc.org/)
+
 ::: notes
 Add: admiral website, cheat sheet, anything else? Mention the Blog as well.
 :::
