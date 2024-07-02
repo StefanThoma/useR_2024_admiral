@@ -314,7 +314,7 @@ Section duration {1 min}
 
 We've talked a lot about the past and present of {admiral}, so we'd like to conclude about what's next for the project.
 
-Similar to {dplyr}, the core {admiral} package has now reached a point of maturity and stability, where we do not anticipate the need for large overhauls of our material in the future. At the same time, our documentation has undergone many rounds of review and is robust and extensive. Industry uptake is contantly on the rise and we see a near future where it is **the** default solution for ADaM creation.
+Similar to {dplyr}, the core {admiral} package has now reached a point of maturity and stability, where we do not anticipate the need for large overhauls of our material in the future. At the same time, our documentation has undergone many rounds of review and is robust and extensive. Industry uptake is constantly on the rise and we see a near future where it is **the** default solution for ADaM creation.
 
 As such, one avenue for improvement in the future is with regards to the learning curve required to get used to the package. AI is all the rage right now, so why not try to apply it to {admiral} as well? At the moment, there are efforts internally at various companies to train LLMs and chatbots on {admiral} documentation, which have proven quite fruitful. There hasn't yet been an Open Source effort in this space, though it is true that because everything is Open Source, the next re-training of something like Chat GPT may suddenly result in the model being an expert on ADaM creation!
 
@@ -325,13 +325,12 @@ So, we are very excited for what the future holds!
 
 ## Q&A and resources
 
-()[bla ]
-- [{admiral}](https://github.com/pharmaverse/admiral)
-- [Cheat sheet](https://github.com/pharmaverse/admiral/blob/main/inst/cheatsheet/admiral_cheatsheet.pdf)
-- [{admiraldev}](https://github.com/pharmaverse/admiraldev)
-- [Pharmaverse blog](https://pharmaverse.github.io/blog/)
-- [Pharmaverse](https://pharmaverse.org/)
-- [CDISC](https://www.cdisc.org/)
+  - [{admiral}](https://github.com/pharmaverse/admiral)
+  - [Cheat sheet](https://github.com/pharmaverse/admiral/blob/main/inst/cheatsheet/admiral_cheatsheet.pdf)
+  - [{admiraldev}](https://github.com/pharmaverse/admiraldev)
+  - [Pharmaverse blog](https://pharmaverse.github.io/blog/)
+  - [Pharmaverse](https://pharmaverse.org/)
+  - [CDISC](https://www.cdisc.org/)
 
 ::: notes
 Add: admiral website, cheat sheet, anything else? Mention the Blog as well.
