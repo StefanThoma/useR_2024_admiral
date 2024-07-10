@@ -282,9 +282,10 @@ The second important learning is the management of expectation for the extension
 -   ... Enter {admiralvaccine}!
 
 ::: {layout-ncol="2"}
-![](media/covid.jpg){width="40%" height="40%"}
+![](media/covid.jpg)
+<!-- {width="40%" height="40%"} -->
 
-![](media/admiralvaccine.png){width="15%" height="15%"}
+![](media/admiralvaccine.png){width="50%" height="50%"}
 :::
 
 ::: notes
@@ -304,9 +305,11 @@ We should stress that not all aspects of this experience were strictly positive:
 Training models on {admiral} documentation: could genAI be the next frontier?
 
 ::: {layout-ncol="2"}
-![](media/admiral_website.png){width="15%" height="15%"}
+![](media/admiral_website.png)
+<!-- {width="15%" height="15%"} -->
 
-![](media/ai.png){width="20%" height="20%"}
+![](media/ai.png)
+<!-- {width="20%" height="20%"} -->
 :::
 
 ::: notes
